@@ -14,6 +14,13 @@ body {
   gap: 40px;
 }
 
+.box_transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
 .shadow {
   margin: 0;
   font-size: 35px;
@@ -87,4 +94,84 @@ body {
   width: 350px;
   height: 120px;
   box-shadow: 0 5px 10px #f59a23;
+}
+
+.square_transform {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hi {
+  align-self: center;
+}
+
+.square {
+  width: 50%;
+  height: 100px;
+  transition: transform 1s;
+}
+
+.square_1 {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+  transform-origin: left top;
+  transform: rotate(0);
+}
+
+.square_transform:hover .square_1 {
+  transform-origin: left top;
+  transform: rotate(90deg);
+}
+
+.square_2 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 100px;
+  background-color: yellow;
+  transform-origin: right top;
+  transform: rotate(0);
+}
+
+.square_transform:hover .square_2 {
+  transform: rotate(-90deg);
+  transform-origin: right top;
+}
+
+.square_3 {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 0px;
+  background-color: blueviolet;
+  transform-origin: left bottom;
+  transform: rotate(0);
+}
+
+.square_transform:hover .square_3 {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+}
+
+.square_4 {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 100px;
+  background-color: yellowgreen;
+  transform-origin: right bottom;
+  transform: rotate(0);
+}
+
+.square_transform:hover .square_4 {
+  transform: rotate(90deg);
+  transform-origin: right bottom;
 }
